@@ -1,0 +1,321 @@
+{
+  "scenario": "P1 seed",
+  "checkpoints": [
+    {
+      "after": "opening",
+      "check": "balance",
+      "where": {
+        "product": "P-003",
+        "lot": "SC-2611",
+        "location": "RFC",
+        "area": "Main storage"
+      },
+      "expect": {
+        "on_hand": 120,
+        "held": 0,
+        "available": 120
+      }
+    },
+    {
+      "after": "opening",
+      "check": "balance",
+      "where": {
+        "product": "P-003",
+        "lot": "SC-2611",
+        "location": "HHC",
+        "area": "Main storage"
+      },
+      "expect": {
+        "on_hand": 80,
+        "available": 80
+      }
+    },
+    {
+      "after": "opening",
+      "check": "location_total",
+      "where": {
+        "product": "P-002",
+        "location": "RFC"
+      },
+      "expect": {
+        "on_hand": 100
+      }
+    },
+    {
+      "after": "opening",
+      "check": "location_total",
+      "where": {
+        "product": "P-003",
+        "location": "CSR"
+      },
+      "expect": {
+        "on_hand": 200
+      }
+    },
+    {
+      "after": "opening",
+      "check": "category",
+      "where": {
+        "product": "P-005",
+        "lot": "TB-EXP-YDAY"
+      },
+      "expect": {
+        "category": "expired"
+      }
+    },
+    {
+      "after": "opening",
+      "check": "category",
+      "where": {
+        "product": "P-005",
+        "lot": "TB-EXP-TODAY"
+      },
+      "expect": {
+        "category": "expired"
+      }
+    },
+    {
+      "after": "opening",
+      "check": "category",
+      "where": {
+        "product": "P-005",
+        "lot": "TB-PLUS60"
+      },
+      "expect": {
+        "category": "expiring_soon"
+      }
+    },
+    {
+      "after": "opening",
+      "check": "category",
+      "where": {
+        "product": "P-005",
+        "lot": "TB-PLUS61"
+      },
+      "expect": {
+        "category": "none"
+      }
+    },
+    {
+      "after": "opening",
+      "check": "category",
+      "where": {
+        "product": "P-002",
+        "lot": "AP-2026A"
+      },
+      "expect": {
+        "category": "expiring_soon"
+      }
+    },
+    {
+      "after": "opening",
+      "check": "balance",
+      "where": {
+        "product": "P-005",
+        "lot": "TB-EXP-TODAY",
+        "location": "EWC",
+        "area": "Main storage"
+      },
+      "expect": {
+        "on_hand": 8,
+        "available": 0
+      }
+    },
+    {
+      "after": "opening",
+      "check": "balance",
+      "where": {
+        "product": "P-005",
+        "lot": "TB-PLUS61",
+        "location": "HHC",
+        "area": "Main storage"
+      },
+      "expect": {
+        "available": 15
+      }
+    },
+    {
+      "after": "A01",
+      "check": "balance",
+      "where": {
+        "product": "P-002",
+        "lot": "AP-2026A",
+        "location": "RFC",
+        "area": "Main storage"
+      },
+      "expect": {
+        "on_hand": 39
+      }
+    },
+    {
+      "after": "A01",
+      "check": "balance",
+      "where": {
+        "product": "P-002",
+        "lot": "AP-2027B",
+        "location": "RFC",
+        "area": "Main storage"
+      },
+      "expect": {
+        "on_hand": 60
+      }
+    },
+    {
+      "after": "A01",
+      "check": "balance",
+      "where": {
+        "product": "P-002",
+        "lot": "AP-2028C",
+        "location": "RFC",
+        "area": "Main storage"
+      },
+      "expect": {
+        "on_hand": 2,
+        "available": 2
+      }
+    },
+    {
+      "after": "A01",
+      "check": "location_total",
+      "where": {
+        "product": "P-002",
+        "location": "RFC"
+      },
+      "expect": {
+        "on_hand": 101
+      }
+    },
+    {
+      "after": "A01",
+      "check": "balance",
+      "where": {
+        "product": "P-003",
+        "lot": "SC-2611",
+        "location": "RFC",
+        "area": "Main storage"
+      },
+      "expect": {
+        "on_hand": 120
+      }
+    },
+    {
+      "after": "A01",
+      "check": "balance",
+      "where": {
+        "product": "P-001",
+        "lot": "NG-LOT-1",
+        "location": "RFC",
+        "area": "Main storage"
+      },
+      "expect": {
+        "on_hand": 21
+      }
+    },
+    {
+      "after": "A02",
+      "check": "balance",
+      "where": {
+        "product": "P-002",
+        "lot": "AP-2026A",
+        "location": "RFC",
+        "area": "Main storage"
+      },
+      "expect": {
+        "on_hand": 29
+      }
+    },
+    {
+      "after": "A02",
+      "check": "location_total",
+      "where": {
+        "product": "P-002",
+        "location": "RFC"
+      },
+      "expect": {
+        "on_hand": 91
+      }
+    },
+    {
+      "after": "A03",
+      "check": "balance",
+      "where": {
+        "product": "P-001",
+        "lot": "NG-LOT-2",
+        "location": "HHC",
+        "area": "Main storage"
+      },
+      "expect": {
+        "on_hand": 0,
+        "available": 0
+      }
+    },
+    {
+      "after": "A03",
+      "check": "low",
+      "where": {
+        "product": "P-001",
+        "location": "HHC"
+      },
+      "expect": {
+        "low": true
+      }
+    },
+    {
+      "after": "A03",
+      "check": "low",
+      "where": {
+        "product": "P-003",
+        "location": "HHC"
+      },
+      "expect": {
+        "low": false
+      }
+    },
+    {
+      "after": "A03",
+      "check": "low",
+      "where": {
+        "product": "P-005",
+        "location": "EWC"
+      },
+      "expect": {
+        "low": true
+      }
+    },
+    {
+      "after": "A03",
+      "check": "low",
+      "where": {
+        "product": "P-004",
+        "location": "EWC"
+      },
+      "expect": {
+        "low": true
+      }
+    },
+    {
+      "after": "A03",
+      "check": "low",
+      "where": {
+        "product": "P-001",
+        "location": "RFC"
+      },
+      "expect": {
+        "low": false
+      }
+    },
+    {
+      "after": "A03",
+      "check": "balance",
+      "where": {
+        "product": "P-005",
+        "lot": "TB-EXP-TODAY",
+        "location": "EWC",
+        "area": "Main storage"
+      },
+      "expect": {
+        "available": 0
+      }
+    }
+  ]
+}

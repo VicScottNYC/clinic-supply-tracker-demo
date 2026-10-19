@@ -1,0 +1,102 @@
+{
+  "desktop-light/Inventory": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "desktop-light/Receive supplies": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "desktop-light/Issue supplies": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "desktop-light/Counts": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "desktop-light/History": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "desktop-dark/Inventory": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "desktop-dark/Receive supplies": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "desktop-dark/Issue supplies": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "desktop-dark/Counts": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "desktop-dark/History": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "phone-light/Inventory": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "phone-light/Receive supplies": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "phone-light/Issue supplies": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "phone-light/Counts": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "phone-light/History": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "phone-dark/Inventory": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "phone-dark/Receive supplies": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "phone-dark/Issue supplies": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "phone-dark/Counts": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "phone-dark/History": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "zoom200-light/Inventory": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "zoom200-light/Receive supplies": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "zoom200-light/Issue supplies": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "zoom200-light/Counts": {
+    "violations": [],
+    "horizontalScroll": false
+  },
+  "zoom200-light/History": {
+    "violations": [],
+    "horizontalScroll": false
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "scenario": "P1 seed",
+  "actions": [
+    {
+      "id": "A01",
+      "op": "count_complete",
+      "count": "C-RFC-01",
+      "location": "RFC",
+      "area": "Main storage",
+      "counted_by": "counter_rfc",
+      "lines": [
+        {
+          "line": "L1",
+          "product": "P-003",
+          "lot": "SC-2611",
+          "expected": 120
+        },
+        {
+          "line": "L2",
+          "product": "P-002",
+          "lot": "AP-2026A",
+          "expected": 40
+        },
+        {
+          "line": "L3",
+          "product": "P-002",
+          "lot": "AP-2027B",
+          "expected": 60
+        },
+        {
+          "line": "L4",
+          "product": "P-001",
+          "lot": "NG-LOT-1",
+          "expected": 21
+        },
+        {
+          "line": "L5",
+          "product": "P-002",
+          "lot": "AP-2028C",
+          "expected": 0,
+          "pending_expiration": "2028-01-31"
+        }
+      ],
+      "attempts": [
+        {
+          "line": "L1",
+          "attempt_no": 1,
+          "counted": 120
+        },
+        {
+          "line": "L2",
+          "attempt_no": 1,
+          "counted": 37
+        },
+        {
+          "line": "L3",
+          "attempt_no": 1,
+          "counted": 60
+        },
+        {
+          "line": "L4",
+          "attempt_no": 1,
+          "counted": 21
+        },
+        {
+          "line": "L5",
+          "attempt_no": 1,
+          "counted": 2
+        },
+        {
+          "line": "L2",
+          "attempt_no": 2,
+          "counted": 39
+        }
+      ],
+      "approvals": []
+    },
+    {
+      "id": "A02",
+      "op": "issue_fefo",
+      "product": "P-002",
+      "location": "RFC",
+      "area": "Main storage",
+      "qty": 10
+    },
+    {
+      "id": "A03",
+      "op": "issue_fefo",
+      "product": "P-001",
+      "location": "HHC",
+      "area": "Main storage",
+      "qty": 10
+    }
+  ]
+}
