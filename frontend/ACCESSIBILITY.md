@@ -1,7 +1,7 @@
 # Accessibility and presentation review (P1 interface)
 
 Scope: the five P1 screens (Inventory, Receive supplies, Issue supplies, Counts, History) in five states: desktop
-light, desktop dark, phone (375 px) light, phone dark, and 200% zoom (640 CSS px). Tested in headless Chromium in the
+light, desktop dark, phone (375 px) light, phone dark, and 640 CSS px reflow (not browser zoom). Tested in headless Chromium in the
 cloud container. Not yet tested with VoiceOver or on a physical phone (see the checklist below).
 
 ## Method and exact coverage
@@ -69,6 +69,6 @@ Record the outcome of each step here (date, browser, result, anything found).
 | Actual 200% browser zoom (receiving, errors, counts, history) | Pass, as reported by reviewer | Mac browser, 2026-10-19 | The automated 640 px case is reflow, not zoom |
 | Physical phone | Not verified | n/a | Remains a documented limitation |
 
-Note on the automated `zoom200-light` label: it is a 640 CSS px viewport (reflow). Real 200% zoom is the manual check
+Note on the automated `reflow640-light` label: it is a 640 CSS px viewport (reflow). Real 200% zoom is the manual check
 above, not the audit.
 

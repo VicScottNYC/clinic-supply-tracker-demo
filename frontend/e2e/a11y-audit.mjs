@@ -1,5 +1,5 @@
 // Automated accessibility audit (axe-core, pinned in devDependencies) on each P1 screen in five states:
-// desktop light/dark, phone (375 px) light/dark, and 200% zoom (640 CSS px). It records axe violations and
+// desktop light/dark, phone (375 px) light/dark, and 640 CSS px reflow (not browser zoom). It records axe violations and
 // horizontal page scroll. Exits 1 if any state has a violation or horizontal scroll, so it can gate a run.
 // Scope: automated rules only. It does not replace screen-reader or keyboard checks (see keyboard-check.mjs).
 import { chromium } from "playwright-core";
@@ -25,7 +25,7 @@ const states = [
   { mode: "desktop-dark", width: 1280, scheme: "dark" },
   { mode: "phone-light", width: 375, scheme: "light" },
   { mode: "phone-dark", width: 375, scheme: "dark" },
-  { mode: "zoom200-light", width: 640, scheme: "light" }, // 200% zoom on a 1280 px display
+  { mode: "reflow640-light", width: 640, scheme: "light" }, // 640 CSS px reflow viewport (not browser zoom)
 ];
 
 const results = {};
