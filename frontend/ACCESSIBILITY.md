@@ -83,10 +83,11 @@ Checklist steps are unchanged above. Results are recorded here.
 | 4. Receive pending (Safari) | Safari 27.0.1 (22625.1.29.11.28) | 2026-10-20 | After Post: banner read in full, beginning "Pending: Receipt. Outcome unknown." Tab: "Retry same request". | Pass | Current committed code, no change. Dropped request: API stopped, so the banner read "The server returned an error (502)". |
 | 5. Counts labels | Chrome 155.0.8059.85 (arm64) | 2026-10-19 | "Physical count P-003 lot SC-2611, Menu pop up, edit text, table, 7 columns, 6 rows"; Moved to the next input "Physical count P-002 lot AP-2026A, edit text" | Pass |
 | 6. History headers (movements table) | Chrome 155.0.8059.85 (arm64) | 2026-10-20 | Cell 1: "Product P-001 column 1 of 7, Lot NG-DROP-1 volume 2 of 7, Area Main Storage column 3 of 7, On hand +10 column 4 of 7, Held 0 column 5 of 7, Reason receipt column 6 of 7, Occurred (UTC) 2026-10-18T13:00:00Z column 7 of 7". | Pass | Each data cell announces its column header with its value. VoiceOver says "volume" for the Lot column; this is a VoiceOver wording quirk, and the column is announced correctly. |
-| 7. Phone layout, 200% zoom | Safari 27.0.1 (22625.1.29.11.28) | 2026-10-19 | "Zoom in" on each zoom step | Pass | no |
+| 7. Phone layout, 200% zoom | Safari 27.0.1 (22625.1.29.11.28) | 2026-10-20 | Checked receiving, errors, counts, and history at 200%. Reading order matched the screen; every control was reachable with VoiceOver (including Post receipt, Retry, and Cancel count); no sideways scrolling; errors appeared beside their fields. | Pass | The "Zoom in" announcements are VoiceOver's own speech, not part of the result. |
 
 Open items:
-- Physical phone: not tested.
+- Physical phone: not tested (unverified).
+
 
 Note on the automated `reflow640-light` label: it is a 640 CSS px viewport (reflow). Real 200% zoom is the manual check
 above, not the audit.
