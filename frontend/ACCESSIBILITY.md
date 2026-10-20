@@ -69,6 +69,28 @@ Record the outcome of each step here (date, browser, result, anything found).
 | Actual 200% browser zoom (receiving, errors, counts, history) | Pass, as reported by reviewer | Mac browser, 2026-10-19 | The automated 640 px case is reflow, not zoom |
 | Physical phone | Not verified | n/a | Remains a documented limitation |
 
+## VoiceOver results, 2026-10-19
+
+Checklist steps are unchanged above. Results are recorded here.
+
+| Step | Browser and version | Date | What VoiceOver announced | Result | Notes |
+|---|---|---|---|---|---|
+| 1. Inventory toggle | Chrome 155.0.8059.85 (arm64) | 2026-10-19 | "(reads full date and time), collapsed, button" | Pass | |
+| 2. Receive labels | Chrome 155.0.8059.85 (arm64) | 2026-10-19 | "Menu, 1 item checked" (storage); "Menu, 5 items checked" (product); "Lot for line 1"; date steppers; "Unit for line 1"; "Quantity for line 1" | Pass | Packing slip field read its placeholder "e.g. PS-001" as its name. Follow-up: check the field has a visible label. |
+| 3. Receive error | Chrome 155.0.8059.85 (arm64) | 2026-10-19 | "Lot for line 1, edit text." | Pass | |
+| 4. Receive pending (Chrome) | Chrome 155.0.8059.85 (arm64) | 2026-10-19 | After Post: "Pending 2"; banner not read in full. Tab: reached "Retry same request". | Fail | Earlier code had a live region that was not announced. Focus moved to the banner. |
+| 4. Receive pending (Chrome, committed code) | Chrome 155.0.8059.85 (arm64) | 2026-10-20 | Same as Safari: announced after Post, Tab reaches "Retry same request". [exact words] | Pass | Retest after the live region was removed. |
+| 4. Receive pending (Safari) | Safari 27.0.1 (22625.1.29.11.28) | 2026-10-20 | After Post: ["Pending: Receipt. Outcome unknown. The server returned an error (502). Retry sends the original request again (same actor counter_rfc, clinic RFC, same key). Nothing else can be submitted until it resolves.
+Keep this tab open. Reloading or closing the browser discards the pending request and its key, and the outcome then has to be checked by hand. The pending request is held in memory only." Pressing Tab announced "Retry same request"]. Tab: "Retry same request" [exact words]. | Pass | Current committed code, no change. |
+| 5. Counts labels | Chrome 155.0.8059.85 (arm64) | 2026-10-19 | "You are currently on web content…" | Unclear | Rerun needed. |
+| 6. History headers | Chrome 155.0.8059.85 (arm64) | 2026-10-19 | "(Reads the full date and time), collapsed, button" | Fail | Table headers not announced. |
+| 7. Phone layout, 200% zoom | Safari 27.0.1 (22625.1.29.11.28) | 2026-10-19 | "Zoom in" on each zoom step | Pass | |
+
+Open items:
+- Step 5 needs a rerun.
+- Step 6 needs a fix and retest.
+- Physical phone: not tested.
+
 Note on the automated `reflow640-light` label: it is a 640 CSS px viewport (reflow). Real 200% zoom is the manual check
 above, not the audit.
 
