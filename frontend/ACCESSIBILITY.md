@@ -82,7 +82,7 @@ Checklist steps are unchanged above. Results are recorded here.
 | 4. Receive pending (Chrome, committed code) | Chrome 155.0.8059.85 (arm64) | 2026-10-20 | Same as Safari: announced after Post, Tab reaches "Retry same request". [exact words] | Pass | Retest after the live region was removed. |
 | 4. Receive pending (Safari) | Safari 27.0.1 (22625.1.29.11.28) | 2026-10-20 | After Post: ["Pending: Receipt. Outcome unknown. The server returned an error (502). Retry sends the original request again (same actor counter_rfc, clinic RFC, same key). Nothing else can be submitted until it resolves.
 Keep this tab open. Reloading or closing the browser discards the pending request and its key, and the outcome then has to be checked by hand. The pending request is held in memory only." Pressing Tab announced "Retry same request"]. Tab: "Retry same request" [exact words]. | Pass | Current committed code, no change. |
-| 5. Counts labels | Chrome 155.0.8059.85 (arm64) | 2026-10-19 | "You are currently on web content…" | Unclear | Rerun needed. |
+| 5. Counts labels | Chrome 155.0.8059.85 (arm64) | 2026-10-19 | "Physical count P-003 lot SC-2611, Menu pop up, edit text, table, 7 columns, 6 rows"; Moved to the next input "Physical count P-002 lot AP-2026A, edit text" | Pass |
 | 6. History headers | Chrome 155.0.8059.85 (arm64) | 2026-10-19 | "(Reads the full date and time), collapsed, button" | Fail | Table headers not announced. |
 | 7. Phone layout, 200% zoom | Safari 27.0.1 (22625.1.29.11.28) | 2026-10-19 | "Zoom in" on each zoom step | Pass | |
 
