@@ -67,7 +67,7 @@ Record the outcome of each step here (date, browser, result, anything found).
 | `e2e/a11y-audit.mjs` | Pass, 25 checks, 0 findings, exit 0 | Mac, 2026-10-19 | Five states: desktop light and dark, phone light and dark, 640 px reflow |
 | VoiceOver (seven-step checklist above) | Pass, as reported by reviewer | Safari, Mac, 2026-10-19 | Per-step notes not yet recorded: add them to the table |
 | Actual 200% browser zoom (receiving, errors, counts, history) | Pass, as reported by reviewer | Mac browser, 2026-10-19 | The automated 640 px case is reflow, not zoom |
-| Physical phone | Not verified | n/a | Remains a documented limitation |
+| Physical phone | [model, e.g. iPhone 15] · iOS 27.0 · Safari 27.0] | 2026-10-20 | Phone layout checked on the device: each receipt line shows as a card with labels; every control was reachable; no sideways scrolling; errors appeared beside their fields. | Pass | Checked on a physical phone over local Wi-Fi with the Vite network address. |
 
 ## VoiceOver results, 2026-10-19
 
@@ -85,8 +85,6 @@ Checklist steps are unchanged above. Results are recorded here.
 | 6. History headers (movements table) | Chrome 155.0.8059.85 (arm64) | 2026-10-20 | Cell 1: "Product P-001 column 1 of 7, Lot NG-DROP-1 volume 2 of 7, Area Main Storage column 3 of 7, On hand +10 column 4 of 7, Held 0 column 5 of 7, Reason receipt column 6 of 7, Occurred (UTC) 2026-10-18T13:00:00Z column 7 of 7". | Pass | Each data cell announces its column header with its value. VoiceOver says "volume" for the Lot column; this is a VoiceOver wording quirk, and the column is announced correctly. |
 | 7. Phone layout, 200% zoom | Safari 27.0.1 (22625.1.29.11.28) | 2026-10-20 | Checked receiving, errors, counts, and history at 200%. Reading order matched the screen; every control was reachable with VoiceOver (including Post receipt, Retry, and Cancel count); no sideways scrolling; errors appeared beside their fields. | Pass | The "Zoom in" announcements are VoiceOver's own speech, not part of the result. |
 
-Open items:
-- Physical phone: not tested (unverified).
 
 
 Note on the automated `reflow640-light` label: it is a 640 CSS px viewport (reflow). Real 200% zoom is the manual check
