@@ -28,7 +28,7 @@ This project addresses all three for the P1 scope: receiving, issuing, counting,
 
 ## Walkthrough video
 
-[Link: two to three minute walkthrough]
+[Watch the two to three minute walkthrough](docs/video/walkthrough.mp4)
 
 The video covers: receiving 2 cases (24 boxes), issuing the earliest-expiring lot, resolving a count discrepancy, and inspecting history.
 
