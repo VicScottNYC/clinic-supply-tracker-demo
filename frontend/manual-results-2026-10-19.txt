@@ -1,0 +1,62 @@
+1. Inventory: Tab to a product toggle; VoiceOver says it is a button and announces expanded or collapsed.
+Browser and version: Safari Version 27.0.1 (22625.1.29.11.28)
+Date: 10/19/2026
+What VoiceOver announced, word for word: "Oct 18,2026 at 9:00 AM EST 2026-10-18T13:00:00Z, collapsed, button"
+Pass or fail: Pass
+Any issue, with what you expected instead?: No
+
+2. Receive: each line control announces its label ("Lot for line 1", "Quantity for line 1", and so on).
+Browser and version: Safari Version 27.0.1 (22625.1.29.11.28)
+Date: 10/19/2026
+What VoiceOver announced, word for word: 
+a. Storage area: "Menu, 1 item checked"
+b. Packing slip reference (optional): "reads the example of a packing slip reference 'e.g. PS-001"
+c. Product: "Menu, 5 items checked"
+d. Lot: "Lot for line 1"
+e. Expiration: "(10,month, stepper), (19, day, stepper), (2026, year, stepper)
+f. Unit: "Unit for line 1"
+g. Quantity: "Quantity for line 1"
+Pass or fail: Pass
+Any issue, with what you expected instead?: No
+
+
+3. Receive error: submit with an empty lot; VoiceOver announces the error and focus lands on the Lot field.
+Browser and version: Safari Version 27.0.1 (22625.1.29.11.28)
+Date: 10/19/2026
+What VoiceOver announced, word for word: "Lot for line 1, edit text. "
+Pass or fail: Pass
+Any issue, with what you expected instead?: No
+
+4. Receive pending: with the first request dropped (or a simulated 503), the pending banner is announced as a status
+and receives focus; Retry is reachable by Tab.
+Browser and version: Safari Version 27.0.1 (22625.1.29.11.28)
+Date: 10/19/2026
+What VoiceOver announced, word for word: "Pending: Receipt. Outcome unknown. The server returned an error (502). Retry sends the original request again (same actor counter_rfc, clinic RFC, same key). Nothing else can be submitted until it resolves.
+Keep this tab open. Reloading or closing the browser discards the pending request and its key, and the outcome then has to be checked by hand. The pending request is held in memory only." Pressing Tab announced "Retry same request"
+Pass or fail: Pass
+Any issue, with what you expected instead?: No
+
+5. Counts: a row's count input is labelled with its SKU and lot.
+Browser and version: Safari Version 27.0.1 (22625.1.29.11.28)
+Date: 10/19/2026
+What VoiceOver announced, word for word: "Physical count P-003 lot SC-2611, Menu pop up, edit text, table, 7 columns, 6 rows"; Moved to the next input "Physical count P-002 slot AP-2026A, edit text"
+Pass or fail: Pass
+Any issue, with what you expected instead?: No
+
+6. History: a transaction toggle announces expanded or collapsed, and the movements table has headers.
+Browser and version: Safari Version 27.0.1 (22625.1.29.11.28)
+Date: 10/19/2026
+What VoiceOver announced, word for word: "(Reads the full date and time), collapsed, button"
+Pass or fail: Fail
+Any issue, with what you expected instead?: Yes, VoiceOVer did not announce the movements table has headers.
+
+7. Phone layout, 200% zoom in Safari: everything reads in order, with no lost controls.
+Browser and version: Safari Version 27.0.1 (22625.1.29.11.28)
+Date: 10/19/2026
+What VoiceOver announced, word for word: VoiceOver says "Zoom in" each time I press 'command +' to zoom in
+Pass or fail: Pass
+Any issue, with what you expected instead?: No
+
+Record the outcome of each step here (date, browser, result, anything found).
+
+

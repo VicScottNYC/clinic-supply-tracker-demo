@@ -1,0 +1,21 @@
+# Local environments and build output
+.venv/
+venv/
+node_modules/
+frontend/dist/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+
+# Databases and demo data created on a machine (never commit): the clinic-demo folder lives outside the repo,
+# but protect against copies landing here.
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+clinic-demo/
+
+# Screenshots produced by local runs (the reviewed set lives in frontend/verification/)
+frontend/e2e-shots/
+frontend/a11y-shots/

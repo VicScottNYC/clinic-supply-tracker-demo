@@ -1,0 +1,308 @@
+{
+  "scenarios": [
+    {
+      "id": "hold_transfer",
+      "checkpoints": [
+        {
+          "after": "A01",
+          "check": "hold",
+          "where": {
+            "hold": "H-1"
+          },
+          "expect": {
+            "remaining": 30,
+            "status": "active"
+          }
+        },
+        {
+          "after": "A01",
+          "check": "balance",
+          "where": {
+            "product": "P-003",
+            "lot": "SC-2611",
+            "location": "HHC",
+            "area": "Main storage"
+          },
+          "expect": {
+            "on_hand": 80,
+            "held": 30,
+            "available": 50
+          }
+        },
+        {
+          "after": "A02",
+          "check": "hold",
+          "where": {
+            "hold": "H-1"
+          },
+          "expect": {
+            "remaining": 20,
+            "status": "active"
+          }
+        },
+        {
+          "after": "A02",
+          "check": "balance",
+          "where": {
+            "product": "P-003",
+            "lot": "SC-2611",
+            "location": "HHC",
+            "area": "Main storage"
+          },
+          "expect": {
+            "on_hand": 80,
+            "held": 20,
+            "available": 60
+          }
+        },
+        {
+          "after": "A03",
+          "check": "hold",
+          "where": {
+            "hold": "H-1"
+          },
+          "expect": {
+            "remaining": 15,
+            "status": "active"
+          }
+        },
+        {
+          "after": "A03",
+          "check": "balance",
+          "where": {
+            "product": "P-003",
+            "lot": "SC-2611",
+            "location": "HHC",
+            "area": "Main storage"
+          },
+          "expect": {
+            "on_hand": 75,
+            "held": 15,
+            "available": 60
+          }
+        },
+        {
+          "after": "A04",
+          "check": "balance",
+          "where": {
+            "product": "P-003",
+            "lot": "SC-2611",
+            "location": "RFC",
+            "area": "Main storage"
+          },
+          "expect": {
+            "on_hand": 95
+          }
+        },
+        {
+          "after": "A04",
+          "check": "transit",
+          "where": {
+            "line": "T-1"
+          },
+          "expect": {
+            "in_transit": 25
+          }
+        },
+        {
+          "after": "A05",
+          "check": "balance",
+          "where": {
+            "product": "P-003",
+            "lot": "SC-2611",
+            "location": "EWC",
+            "area": "Main storage"
+          },
+          "expect": {
+            "on_hand": 15
+          }
+        },
+        {
+          "after": "A05",
+          "check": "transit",
+          "where": {
+            "line": "T-1"
+          },
+          "expect": {
+            "in_transit": 10
+          }
+        },
+        {
+          "after": "A06",
+          "check": "transit",
+          "where": {
+            "line": "T-1"
+          },
+          "expect": {
+            "in_transit": 0
+          }
+        },
+        {
+          "after": "A06",
+          "check": "transit",
+          "where": {
+            "line": "T-2"
+          },
+          "expect": {
+            "in_transit": 10
+          }
+        },
+        {
+          "after": "A06",
+          "check": "balance",
+          "where": {
+            "product": "P-003",
+            "lot": "SC-2611",
+            "location": "RFC",
+            "area": "Main storage"
+          },
+          "expect": {
+            "on_hand": 95
+          }
+        },
+        {
+          "after": "A06",
+          "check": "balance",
+          "where": {
+            "product": "P-003",
+            "lot": "SC-2611",
+            "location": "EWC",
+            "area": "Main storage"
+          },
+          "expect": {
+            "on_hand": 15
+          }
+        },
+        {
+          "after": "A07",
+          "check": "balance",
+          "where": {
+            "product": "P-003",
+            "lot": "SC-2611",
+            "location": "RFC",
+            "area": "Main storage"
+          },
+          "expect": {
+            "on_hand": 105
+          }
+        },
+        {
+          "after": "A07",
+          "check": "balance",
+          "where": {
+            "product": "P-003",
+            "lot": "SC-2611",
+            "location": "EWC",
+            "area": "Main storage"
+          },
+          "expect": {
+            "on_hand": 15
+          }
+        },
+        {
+          "after": "A07",
+          "check": "transit",
+          "where": {
+            "line": "T-2"
+          },
+          "expect": {
+            "in_transit": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "approval_hhc",
+      "checkpoints": [
+        {
+          "after": "A01",
+          "check": "balance",
+          "where": {
+            "product": "P-003",
+            "lot": "SC-2611",
+            "location": "HHC",
+            "area": "Main storage"
+          },
+          "expect": {
+            "on_hand": 75
+          }
+        },
+        {
+          "after": "A01",
+          "check": "balance",
+          "where": {
+            "product": "P-005",
+            "lot": "TB-PLUS60",
+            "location": "HHC",
+            "area": "Main storage"
+          },
+          "expect": {
+            "on_hand": 12
+          }
+        },
+        {
+          "after": "A01",
+          "check": "balance",
+          "where": {
+            "product": "P-005",
+            "lot": "TB-PLUS61",
+            "location": "HHC",
+            "area": "Main storage"
+          },
+          "expect": {
+            "on_hand": 15
+          }
+        },
+        {
+          "after": "A01",
+          "check": "executions",
+          "where": {
+            "count": "C-HHC-01"
+          },
+          "expect": {
+            "executions": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "surplus_rfc",
+      "checkpoints": [
+        {
+          "after": "A01",
+          "check": "balance",
+          "where": {
+            "product": "P-002",
+            "lot": "AP-2028C",
+            "location": "RFC",
+            "area": "Main storage"
+          },
+          "expect": {
+            "on_hand": 24
+          }
+        },
+        {
+          "after": "A01",
+          "check": "location_total",
+          "where": {
+            "product": "P-002",
+            "location": "RFC"
+          },
+          "expect": {
+            "on_hand": 124
+          }
+        },
+        {
+          "after": "A01",
+          "check": "executions",
+          "where": {
+            "count": "C-RFC-02"
+          },
+          "expect": {
+            "executions": 1
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "scenarios": [
+    {
+      "id": "hold_transfer",
+      "actions": [
+        {
+          "id": "A01",
+          "op": "hold",
+          "hold": "H-1",
+          "product": "P-003",
+          "lot": "SC-2611",
+          "location": "HHC",
+          "area": "Main storage",
+          "qty": 30
+        },
+        {
+          "id": "A02",
+          "op": "release",
+          "hold": "H-1",
+          "qty": 10
+        },
+        {
+          "id": "A03",
+          "op": "discard",
+          "hold": "H-1",
+          "qty": 5
+        },
+        {
+          "id": "A04",
+          "op": "transfer_dispatch",
+          "line": "T-1",
+          "product": "P-003",
+          "lot": "SC-2611",
+          "location": "RFC",
+          "area": "Main storage",
+          "qty": 25
+        },
+        {
+          "id": "A05",
+          "op": "transfer_receive",
+          "line": "T-1",
+          "location": "EWC",
+          "area": "Main storage",
+          "qty": 15
+        },
+        {
+          "id": "A06",
+          "op": "transfer_return_dispatch",
+          "from_line": "T-1",
+          "to_line": "T-2",
+          "qty": 10
+        },
+        {
+          "id": "A07",
+          "op": "transfer_receive",
+          "line": "T-2",
+          "location": "RFC",
+          "area": "Main storage",
+          "qty": 10
+        }
+      ]
+    },
+    {
+      "id": "approval_hhc",
+      "actions": [
+        {
+          "id": "A01",
+          "op": "count_complete",
+          "count": "C-HHC-01",
+          "location": "HHC",
+          "area": "Main storage",
+          "counted_by": "counter_hhc",
+          "lines": [
+            {
+              "line": "L1",
+              "product": "P-003",
+              "lot": "SC-2611",
+              "expected": 80
+            },
+            {
+              "line": "L2",
+              "product": "P-005",
+              "lot": "TB-PLUS60",
+              "expected": 15
+            },
+            {
+              "line": "L3",
+              "product": "P-005",
+              "lot": "TB-PLUS61",
+              "expected": 15
+            },
+            {
+              "line": "L4",
+              "product": "P-001",
+              "lot": "NG-LOT-2",
+              "expected": 10
+            }
+          ],
+          "attempts": [
+            {
+              "line": "L1",
+              "attempt_no": 1,
+              "counted": 75
+            },
+            {
+              "line": "L2",
+              "attempt_no": 1,
+              "counted": 12
+            },
+            {
+              "line": "L3",
+              "attempt_no": 1,
+              "counted": 15
+            },
+            {
+              "line": "L4",
+              "attempt_no": 1,
+              "counted": 10
+            }
+          ],
+          "approvals": [
+            {
+              "line": "L1",
+              "approver": "manager_all",
+              "decision": "approved"
+            },
+            {
+              "line": "L2",
+              "approver": "manager_all",
+              "decision": "approved"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "surplus_rfc",
+      "actions": [
+        {
+          "id": "A01",
+          "op": "count_complete",
+          "count": "C-RFC-02",
+          "location": "RFC",
+          "area": "Main storage",
+          "counted_by": "counter_rfc",
+          "lines": [
+            {
+              "line": "L1",
+              "product": "P-003",
+              "lot": "SC-2611",
+              "expected": 120
+            },
+            {
+              "line": "L2",
+              "product": "P-002",
+              "lot": "AP-2026A",
+              "expected": 40
+            },
+            {
+              "line": "L3",
+              "product": "P-002",
+              "lot": "AP-2027B",
+              "expected": 60
+            },
+            {
+              "line": "L4",
+              "product": "P-001",
+              "lot": "NG-LOT-1",
+              "expected": 21
+            },
+            {
+              "line": "L5",
+              "product": "P-002",
+              "lot": "AP-2028C",
+              "expected": 0,
+              "pending_expiration": "2028-01-31"
+            }
+          ],
+          "attempts": [
+            {
+              "line": "L1",
+              "attempt_no": 1,
+              "counted": 120
+            },
+            {
+              "line": "L2",
+              "attempt_no": 1,
+              "counted": 40
+            },
+            {
+              "line": "L3",
+              "attempt_no": 1,
+              "counted": 60
+            },
+            {
+              "line": "L4",
+              "attempt_no": 1,
+              "counted": 21
+            },
+            {
+              "line": "L5",
+              "attempt_no": 1,
+              "counted": 24
+            }
+          ],
+          "approvals": [
+            {
+              "line": "L5",
+              "approver": "manager_rfc",
+              "decision": "approved"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
